@@ -20,11 +20,13 @@ public class CustomConfig {
         file = new File(Bukkit.getServer().getPluginManager().getPlugin("fenixutilities").getDataFolder(), cfgname + ".yml");
 
         if (!file.exists()){
-            try{
-                file.createNewFile();
-            }catch (IOException e){
-                FenixUtilities.getInstance().getLogger().log(Level.SEVERE, "Could not create file " + file.getAbsolutePath(), e);
-            }
+            Bukkit.getScheduler().runTaskAsynchronously(FenixUtilities.getInstance(), () -> {
+                try {
+                    file.createNewFile();
+                } catch (IOException e) {
+                    FenixUtilities.getInstance().getLogger().log(Level.SEVERE, "Could not create file " + file.getAbsolutePath(), e);
+                }
+            });
         }
         customFile = YamlConfiguration.loadConfiguration(file);
     }
@@ -34,11 +36,13 @@ public class CustomConfig {
     }
 
     public void save(){
-        try{
-            customFile.save(file);
-        }catch (IOException e){
-            FenixUtilities.getInstance().getLogger().log(Level.CONFIG, "Couldn't save file");
-        }
+        Bukkit.getScheduler().runTaskAsynchronously(FenixUtilities.getInstance(), () -> {
+            try {
+                customFile.save(file);
+            } catch (IOException e) {
+                FenixUtilities.getInstance().getLogger().log(Level.SEVERE, "Could not create file " + file.getAbsolutePath(), e);
+            }
+        });
     }
 
     public void reload(){
