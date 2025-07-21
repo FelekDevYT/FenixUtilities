@@ -1,0 +1,12 @@
+items:
+  superItem:
+    defaultItem: DIAMOND_PICKAXE
+    name: SuperDuperPickaxe
+    lore:
+    - some lore
+    - i think it's so cool
+    attribs:
+    - rarity EPIC
+    - unbreaking
+    enchantments:
+    - efficiency 50

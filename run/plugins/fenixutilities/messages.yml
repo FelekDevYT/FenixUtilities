@@ -1,0 +1,9 @@
+spawn:
+  spawn-set: Spawn of world successfully set.
+  spawn-message: You teleported to spawn.
+rtp:
+  rtp-success: '&3 You teleported to %d, %d, %d.'
+home:
+  home-already-exists: Home with this name already exists.
+  home-doesnt-exists: You fucking idiot, you home doesnt exists
+  set-home-success: Home has been set

@@ -1,0 +1,106 @@
+name: fenixutilities
+author: FelekDevYT
+version: '1.0-SNAPSHOT'
+main: me.felek.fenixutilities.FenixUtilities
+api-version: '1.21'
+
+commands:
+  get:
+    description: xd
+    usage: /get <itemName>
+  spawncfg:
+    description: Allow you to configure spawn config in-game.
+    usage: /spawncfg <cfgname> <args>
+    permission: fu.spawncfg
+    permission-message: You dont have permission to run this command.
+  spawn:
+    description: teleport you to spawn.
+    usage: /spawn
+    permission: fu.spawn
+    permission-message: You dont have permission to run this command.
+  setspawn:
+    description: setting spawn on your position.
+    usage: /setspawn
+    permission: fu.setspawn
+    permission-message: You dont have permission to run this command.
+  rtp:
+    description: Random teleport of you.
+    usage: /rtp
+    permission: fu.rtp
+    permission-message: You dont have permission to run this command.
+  rtpcfg:
+    description: Allow you to configure rtp config in-game.
+    usage: /rtpcfg <id> <value>
+    permission: fu.rtpcfg
+    permission-message: You dont have permission to run this command.
+  fu:
+    description: Allows you to work with global fenix utilities
+    usage: /fu <command> args...
+    aliases:
+      - fenixutilities
+      - fenixutils
+      - fenixu
+      - futilities
+      - futils
+    permission: fu.fu
+    permission-message: You dont have permission to run this command.
+  help:
+    description: Allows you to see help page(change help page in cfg)
+    usage: /help
+    permission: fu.help
+    permission-message: You dont have permission to run this command.
+  home:
+    description: Teleport you to home.
+    usage: /home <name>
+    permission: fu.home
+    permission-message: You dont have permission to run this command.
+  sethome:
+    description: Create new home for you.
+    usage: /sethome <name>
+    permission: fu.sethome
+    permission-message: You dont have permission to run this command.
+  homelist:
+    description: get all your homes
+    usage: /homelist
+    permission: fu.homelist
+    permission-message: You dont have permission to run this command.
+  setNickPrefix:
+    description: change your nickname prefix
+    usage: /setNickPrefix
+    permission: fu.setnickprefix
+    permission-message: You dont have permission to run this command.
+
+permissions:
+  fu.spawncfg:
+    description: Allows peoples to use command /setnickprefix
+    default: op
+  fu.setnickprefix:
+    description: Allows peoples to use command /setnickprefix
+    default: op
+  fu.homelist:
+    description: Allows peoples to use command /homelist
+    default: op
+  fu.sethome:
+    description: Allows peoples to use command /sethome.
+    default: op
+  fu.home:
+    description: Allows peoples to use command /home.
+    default: op
+  fu.spawn:
+    description: Allows peoples to use command /spawn.
+    default: op
+  fu.setspawn:
+    description: Allows peoples to use command /setspawn.
+    default: op
+  fu.rtp:
+    description: Allows peoples to use command /rtp.
+    default: op
+  fu.rtpcfg:
+    description: Allows peoples to use command /rtpcfg.
+    default: op
+  fu.fu:
+    description: Allows peoples to use command /fu.
+    default: op
+  fu.help:
+    description: Allows peoples to use command /help.
+    default: op
